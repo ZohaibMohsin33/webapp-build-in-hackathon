@@ -1,0 +1,33 @@
+.gradient{
+    background: -webkit-linear-gradient(to right, #00b4db, #0083b0); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00b4db, #0083b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.clipp{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 76%);
+
+}
+.logosetting{
+    height: 100px;
+    width: 100px;
+}
+.bg-darkThemeBlue{
+    background-color: #0083b0!important;
+}
+.bg-lightThemeBlue{
+    background-color: #00b4db!important;
+}
+
+.text-darkThemeBlue{
+    color: #0083b0!important;
+}
+.text-lightThemeBlue{
+    color: #00b4db!important;
+}
+.headerImage{
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
+}
+.heighted{
+    height: 80vh!important;
+}
