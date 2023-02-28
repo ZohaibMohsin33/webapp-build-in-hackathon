@@ -11,6 +11,7 @@ export default function Index() {
 
   let idGenerated;
   let initialState = {
+    name: '',
     title: '',
     description: '',
     time: '',
@@ -30,8 +31,7 @@ export default function Index() {
 
 
     const documen = doc(fireStore, "users", `${user.uid}`);
-    const docSnap = await (await getDoc(documen));
-    console.log(docSnap.data()[name]);
+    const docSnap = await getDoc(documen);
     console.log(docSnap.data().name);
     setName(docSnap.data().name);
 
@@ -60,6 +60,7 @@ export default function Index() {
     try {
 
       const docRef = await setDoc(doc(fireStore, "events", `${idGenerated}`), {
+        name,
         title,
         description,
         time,
@@ -81,8 +82,14 @@ export default function Index() {
   return (
     <div className="container-fluid height-set">
       <div className="row d-flex justify-content-between p-3">
-        <Link to='/' className='col-1 border rounded-circle gradient text-white fw-bold text-decoration-none text-center py-5'>Home</Link>
-        <Link to='/events' className='col-1 border rounded-circle gradient text-white fw-bold text-decoration-none text-center py-5'>Events</Link>
+        <div className="col-6 ">
+          <Link to='/' className=' px-5 col-1 border rounded-pill rounded-md-circle gradient text-white fw-bold text-decoration-none d-flex justify-content-center align-items-center py-md-5'>Home</Link>
+        </div>
+        <div className="col-6 d-flex justify-content-end">
+          <Link to='/events' className='px-5 col-1 border rounded-pill rounded-md-circle gradient text-white fw-bold text-decoration-none d-flex justify-content-center align-items-center py-md-5'>Events</Link>
+        </div>
+
+
       </div>
       <div className="row d-flex justify-content-center">
         <h2 className='text-center text-darkThemeBlue mb-3'>Hello {`${name}`}</h2>
@@ -134,8 +141,8 @@ export default function Index() {
                 </div>
               </div>
             </div>
-            <div className="row d-flex justify-content-end">
-              <div className="col-1">
+            <div className="row ">
+              <div className="col d-flex justify-content-end">
                 <button className='btn btn-md bg-darkThemeBlue text-white' type='submit' onClick={handleSubmit}>Submit</button>
               </div>
             </div>
