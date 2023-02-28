@@ -47,6 +47,7 @@ export default function Events() {
 
                             </div>
                         </div>)
+                        
                     }) :
                     (
                         <div className="row">No event found</div>
