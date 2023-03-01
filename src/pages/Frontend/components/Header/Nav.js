@@ -38,6 +38,11 @@ export default function Nav() {
                             <li className="nav-item">
                                 <Link to='/events' className="nav-link text-white">Events</Link>
                             </li>
+                            {isAuthenticated &&
+                            <li className="nav-item">
+                                <Link to='/owncreated' className="nav-link text-white">Own Created</Link>
+                            </li>
+}
 
                         </ul>
 
