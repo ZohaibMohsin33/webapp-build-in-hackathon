@@ -51,7 +51,7 @@ return (
   <>
     <div className="container-fluid authBackground">
       <div className="row d-flex justify-content-center align-items-center h-100">
-        <div className="col-6 d-flex flex-column bg-light text-dark fitcontent p-5 ">
+        <div className="col-12 col-md-6 d-flex flex-column bg-light text-dark fitcontent p-5 ">
           <h2 className='m-auto text-darkThemeBlue'>Login</h2>
           <p className='mx-auto mb-3 text-lightThemeBlue'>Enter login details to get access.</p>
 
